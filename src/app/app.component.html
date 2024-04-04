@@ -1,0 +1,11 @@
+<div class="screen d-flex flex-column justify-content-around align-items-center">
+  <h1>Typing challenge</h1>
+  <p>
+    <span [class]="compareText(letter, userInputText[i])" *ngFor="let letter of randomText.split(''); let i = index">{{letter}}</span>
+  </p>
+  <!-- <input #userInput type="text" (input)="onUserInput(userInput.value)"/> -->
+  <input [(ngModel)]="userInputText"/>
+  <div *ngIf="randomText===userInputText">
+    <h1>Success!</h1>
+  </div>
+</div>
